@@ -129,7 +129,7 @@ namespace SteamKit2.Discovery
             if ( endpointList.Count == 0 && canFetchDirectory )
             {
                 DebugWrite( "Server list provider had no entries, will query SteamDirectory" );
-                var directoryList = await SteamDirectory.LoadAsync( CellID );
+                var directoryList = SteamDirectory.LoadAsync( CellID );
 
                 endpointList = directoryList.ToList();
             }

@@ -5892,15 +5892,57 @@ namespace SteamKit2.GC.Dota.Internal
   public partial class CMsgClientToGCGetProfileCard : global::ProtoBuf.IExtensible
   {
     public CMsgClientToGCGetProfileCard() {}
-    
 
     private uint _account_id = default(uint);
-    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name=@"account_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::ProtoBuf.ProtoMember(1, IsRequired = false, Name = @"account_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
     [global::System.ComponentModel.DefaultValue(default(uint))]
     public uint account_id
     {
-      get { return _account_id; }
-      set { _account_id = value; }
+        get { return _account_id; }
+        set { _account_id = value; }
+    }
+    
+    private uint _background_def_index = default(uint);
+    [global::ProtoBuf.ProtoMember(2, IsRequired = false, Name = @"background_def_index", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(uint))]
+    public uint background_def_index
+    {
+        get { return _background_def_index; }
+        set { _background_def_index = value; }
+    }
+    private readonly global::System.Collections.Generic.List<CMsgDOTAProfileCard.Slot> _slots = new global::System.Collections.Generic.List<CMsgDOTAProfileCard.Slot>();
+    [global::ProtoBuf.ProtoMember(3, Name = @"slots", DataFormat = global::ProtoBuf.DataFormat.Default)]
+    public global::System.Collections.Generic.List<CMsgDOTAProfileCard.Slot> slots
+    {
+        get { return _slots; }
+    }
+    
+    
+    private uint _badge_points = default(uint);
+    [global::ProtoBuf.ProtoMember(4, IsRequired = false, Name = @"badge_points", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(uint))]
+    public uint badge_points
+    {
+        get { return _badge_points; }
+        set { _badge_points = value; }
+    }
+    
+    private uint _event_points = default(uint);
+    [global::ProtoBuf.ProtoMember(5, IsRequired = false, Name = @"event_points", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(uint))]
+    public uint event_points
+    {
+        get { return _event_points; }
+        set { _event_points = value; }
+    }
+    
+    private uint _event_id = default(uint);
+    [global::ProtoBuf.ProtoMember(6, IsRequired = false, Name = @"event_id", DataFormat = global::ProtoBuf.DataFormat.TwosComplement)]
+    [global::System.ComponentModel.DefaultValue(default(uint))]
+    public uint event_id
+    {
+        get { return _event_id; }
+        set { _event_id = value; }
     }
     private global::ProtoBuf.IExtension extensionObject;
     global::ProtoBuf.IExtension global::ProtoBuf.IExtensible.GetExtensionObject(bool createIfMissing)
